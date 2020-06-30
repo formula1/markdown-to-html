@@ -21,7 +21,7 @@ function RenderGithubMarkdown() {
     var debug = req.param('debug', false);
     md.debug = debug;
     md.bufmax = 2048;
-    md.returnType = "json";
+    md.format = req.param('format', 'json');
     var fileName = path.join(viewsDir, req.params.filename);
     if (debug) console.error('>>>renderMarkdown: fileName="' + fileName + '"');
     md.render(fileName, mdOpts, function(err) {

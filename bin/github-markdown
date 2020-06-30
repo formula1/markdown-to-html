@@ -18,7 +18,7 @@ if (verbose) console.error('>>>opts=', opts);
 var md = new GithubMarkdown();
 md.debug = opts.debug;
 md.bufmax = 2048;
-md.returnType = opts.o;
+md.format = opts.r;
 
 md.render(fileName, opts, function(err) {
   if (err) {

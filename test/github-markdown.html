@@ -33,26 +33,26 @@ And that is not all.</p>
 variable <code>baz</code>.</p>
 <h2>
 <a id="user-content-this-is-some-nonsense-javascript-code" class="anchor" href="#this-is-some-nonsense-javascript-code" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>This is some nonsense javascript code:</h2>
-<pre><code>    var fs = require('fs');
-    var count = 0, text;
-    exports.bar = {
-      boo: true,
-      baz: 'Fred'
-    };
+<pre><code>        var fs = require('fs');
+        var count = 0, text;
+        exports.bar = {
+          boo: true,
+          baz: 'Fred'
+        };
 
-    function foo(inc) {
-      try {
-        console.log("foo has been called");
-        count = count + inc;
-        if (count &gt;= 10) {
-          count = 0;
-        } else {
-          text = fs.readFileSync('foo.txt');
+        function foo(inc) {
+          try {
+            console.log("foo has been called");
+            count = count + inc;
+            if (count &gt;= 10) {
+              count = 0;
+            } else {
+              text = fs.readFileSync('foo.txt');
+            }
+          catch(err) {
+            throw new Error('Help! ' + err);
+          }
         }
-      catch(err) {
-        throw new Error('Help! ' + err);
-      }
-    }
 </code></pre>
 <h1>
 <a id="user-content-fenced-javascript-code" class="anchor" href="#fenced-javascript-code" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Fenced Javascript Code</h1>

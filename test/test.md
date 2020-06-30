@@ -27,6 +27,7 @@ variable `baz`.
 
 ## This is some nonsense javascript code:
 
+```
         var fs = require('fs');
         var count = 0, text;
         exports.bar = {
@@ -47,6 +48,7 @@ variable `baz`.
             throw new Error('Help! ' + err);
           }
         }
+```
 
 # Fenced Javascript Code
 

@@ -24,26 +24,26 @@
 <h2 id="code-enclosed-in-backquotes-">Code enclosed in &#39;backquotes&#39;:</h2>
 <p>Always use <code>var</code> to define a variable. For example, <code>var baz = &#39;initial value&#39;;</code> would define<br>variable <code>baz</code>.</p>
 <h2 id="this-is-some-nonsense-javascript-code-">This is some nonsense javascript code:</h2>
-<pre><code><div class="highlight"><pre>    <span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
-    <span class="kd">var</span> <span class="nx">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">text</span><span class="p">;</span>
-    <span class="nx">exports</span><span class="p">.</span><span class="nx">bar</span> <span class="o">=</span> <span class="p">{</span>
-      <span class="nx">boo</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-      <span class="nx">baz</span><span class="o">:</span> <span class="s1">&#39;Fred&#39;</span>
-    <span class="p">};</span>
+<pre><code><div class="highlight"><pre>        <span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
+        <span class="kd">var</span> <span class="nx">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">text</span><span class="p">;</span>
+        <span class="nx">exports</span><span class="p">.</span><span class="nx">bar</span> <span class="o">=</span> <span class="p">{</span>
+          <span class="nx">boo</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+          <span class="nx">baz</span><span class="o">:</span> <span class="s1">&#39;Fred&#39;</span>
+        <span class="p">};</span>
 
-    <span class="kd">function</span> <span class="nx">foo</span><span class="p">(</span><span class="nx">inc</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">try</span> <span class="p">{</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;foo has been called&quot;</span><span class="p">);</span>
-        <span class="nx">count</span> <span class="o">=</span> <span class="nx">count</span> <span class="o">+</span> <span class="nx">inc</span><span class="p">;</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">count</span> <span class="o">&gt;=</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
-          <span class="nx">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-          <span class="nx">text</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="s1">&#39;foo.txt&#39;</span><span class="p">);</span>
+        <span class="kd">function</span> <span class="nx">foo</span><span class="p">(</span><span class="nx">inc</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">try</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;foo has been called&quot;</span><span class="p">);</span>
+            <span class="nx">count</span> <span class="o">=</span> <span class="nx">count</span> <span class="o">+</span> <span class="nx">inc</span><span class="p">;</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">count</span> <span class="o">&gt;=</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+              <span class="nx">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+              <span class="nx">text</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="s1">&#39;foo.txt&#39;</span><span class="p">);</span>
+            <span class="p">}</span>
+          <span class="k">catch</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;Help! &#39;</span> <span class="o">+</span> <span class="nx">err</span><span class="p">);</span>
+          <span class="p">}</span>
         <span class="p">}</span>
-      <span class="k">catch</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;Help! &#39;</span> <span class="o">+</span> <span class="nx">err</span><span class="p">);</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
 </pre></div>
 
 </code></pre><h1 id="fenced-javascript-code">Fenced Javascript Code</h1>
