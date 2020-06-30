@@ -36,6 +36,8 @@ if (isDevelopment()) {
 web.get('/', routes.home.routeMe);
 web.get('/markdown/:filename', routes.markdown.routeMe);
 web.get('/github-markdown/:filename', routes.github_markdown.routeMe);
+web.get('/markdown-json/:filename', routes.markdown_json.routeMe);
+web.get('/github-markdown-json/:filename', routes.github_markdown_json.routeMe);
 
 process.on('SIGTERM', shutDown); // Doesn't work in win32 os.
 process.on('SIGINT', shutDown);
