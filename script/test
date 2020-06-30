@@ -12,7 +12,7 @@ fi
 
 echo
 echo =======Testing github-markdown=========
-node bin/github-markdown test/test.md -s style.css -c cwjohan/node-redis-queue -t 'file $BASENAME in $DIRNAME' >test/github-markdown.html
+node bin/github-markdown test/test.md -s ghstyle.css -c cwjohan/node-redis-queue -t 'file $BASENAME in $DIRNAME' >test/github-markdown.html
 result=`diff -q -w test/github-markdown-ref.html test/github-markdown.html`
 if [ -z "$result" ]; then
   echo Passed
@@ -22,3 +22,27 @@ else
   diff -w test/github-markdown-ref.html test/github-markdown.html
 fi
 
+
+echo
+echo =======Testing markdown json=========
+node bin/markdown test/test.md -o application/json -h -s style.css -c cwjohan/node-redis-queue -t 'file $BASENAME in $DIRNAME' >test/markdown.json
+result=`diff -q -w test/markdown-ref.json test/markdown.json`
+if [ -z "$result" ]; then
+  echo Passed
+else
+  echo Failed
+  echo $result
+  diff -w test/markdown-ref.json test/markdown.json
+fi
+
+echo
+echo =======Testing github-markdown json=========
+node bin/github-markdown test/test.md -o application/json -s test/ghstyle.css -c cwjohan/node-redis-queue -t 'file $BASENAME in $DIRNAME' >test/github-markdown.json
+result=`diff -q -w test/github-markdown-ref.json test/github-markdown.json`
+if [ -z "$result" ]; then
+  echo Passed
+else
+  echo Failed
+  echo $result
+  diff -w test/github-markdown-ref.json test/github-markdown.json
+fi
